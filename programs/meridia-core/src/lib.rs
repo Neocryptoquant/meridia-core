@@ -2,12 +2,15 @@ use anchor_lang::prelude::*;
 
 pub mod error;
 pub mod instructions;
+pub mod libraries;
 pub mod state;
 
-use instructions::*;
+use instructions::ix_ingest_trigger::*;
+use instructions::ix_place_order::*;
+use instructions::ix_settle_trade::*;
 use state::*;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr");
 
 #[program]
 pub mod meridia_core {
@@ -19,7 +22,7 @@ pub mod meridia_core {
         price_per_unit: u64,
         commodity_type: CommodityType,
     ) -> Result<()> {
-        instructions::place_order::handler(ctx, quantity, price_per_unit, commodity_type)
+        instructions::ix_place_order::handler(ctx, quantity, price_per_unit, commodity_type)
     }
 
     pub fn ingest_trigger(
@@ -31,7 +34,7 @@ pub mod meridia_core {
         proof_type: ProofType,
         timestamp: i64,
     ) -> Result<()> {
-        instructions::ingest_trigger::handler(
+        instructions::ix_ingest_trigger::handler(
             ctx,
             commodity_type,
             quantity,
@@ -43,6 +46,6 @@ pub mod meridia_core {
     }
 
     pub fn settle_trade(ctx: Context<SettleTrade>) -> Result<()> {
-        instructions::settle_trade::handler(ctx)
+        instructions::ix_settle_trade::handler(ctx)
     }
 }

@@ -1,0 +1,132 @@
+    Finished `release` profile [optimized] target(s) in 1.23s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.40s
+     Running unittests src/lib.rs (/home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/target/debug/deps/meridia_core-11c7fa1eead81568)
+
+Found a 'test' script in the Anchor.toml. Running it as a test suite!
+
+Running test suite: "/home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/Anchor.toml"
+
+Error: websocket error
+yarn run v1.22.22
+$ /home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/node_modules/.bin/ts-mocha -p ./tsconfig.json -t 1000000 'tests/**/*.ts'
+(node:18923) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/tests/meridia-core.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+  meridia-core
+Place Order Error: SendTransactionError: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 0: custom program error: 0x1004. 
+Logs: 
+[
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr invoke [1]",
+  "Program log: AnchorError occurred. Error Code: DeclaredProgramIdMismatch. Error Number: 4100. Error Message: The declared program id does not match the actual program id.",
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr consumed 2445 of 200000 compute units",
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr failed: custom program error: 0x1004"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+    at Connection.sendEncodedTransaction (/home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/node_modules/@solana/web3.js/src/connection.ts:6053:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.sendRawTransaction (/home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/node_modules/@solana/web3.js/src/connection.ts:6009:20)
+    at async Connection.sendTransaction (/home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/node_modules/@solana/web3.js/src/connection.ts:5997:12)
+    at async Object.sendAndConfirmTransaction (/home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/node_modules/@solana/web3.js/src/utils/send-and-confirm-transaction.ts:36:21) {
+  signature: '',
+  transactionMessage: 'Transaction simulation failed: Error processing Instruction 0: custom program error: 0x1004',
+  transactionLogs: [
+    'Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr invoke [1]',
+    'Program log: AnchorError occurred. Error Code: DeclaredProgramIdMismatch. Error Number: 4100. Error Message: The declared program id does not match the actual program id.',
+    'Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr consumed 2445 of 200000 compute units',
+    'Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr failed: custom program error: 0x1004'
+  ]
+}
+    1) Places an Order
+Ingest Trigger Error: SendTransactionError: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 0: custom program error: 0x1004. 
+Logs: 
+[
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr invoke [1]",
+  "Program log: AnchorError occurred. Error Code: DeclaredProgramIdMismatch. Error Number: 4100. Error Message: The declared program id does not match the actual program id.",
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr consumed 2445 of 200000 compute units",
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr failed: custom program error: 0x1004"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+    at Connection.sendEncodedTransaction (/home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/node_modules/@solana/web3.js/src/connection.ts:6053:13)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.sendRawTransaction (/home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/node_modules/@solana/web3.js/src/connection.ts:6009:20)
+    at async Connection.sendTransaction (/home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/node_modules/@solana/web3.js/src/connection.ts:5997:12)
+    at async Object.sendAndConfirmTransaction (/home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/node_modules/@solana/web3.js/src/utils/send-and-confirm-transaction.ts:36:21) {
+  signature: '',
+  transactionMessage: 'Transaction simulation failed: Error processing Instruction 0: custom program error: 0x1004',
+  transactionLogs: [
+    'Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr invoke [1]',
+    'Program log: AnchorError occurred. Error Code: DeclaredProgramIdMismatch. Error Number: 4100. Error Message: The declared program id does not match the actual program id.',
+    'Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr consumed 2445 of 200000 compute units',
+    'Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr failed: custom program error: 0x1004'
+  ]
+}
+    2) Ingests a Trigger (Oracle)
+Settle Trade Error Message: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 0: custom program error: 0x1004. 
+Logs: 
+[
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr invoke [1]",
+  "Program log: AnchorError occurred. Error Code: DeclaredProgramIdMismatch. Error Number: 4100. Error Message: The declared program id does not match the actual program id.",
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr consumed 2173 of 200000 compute units",
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr failed: custom program error: 0x1004"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+    3) Settles the Trade
+
+
+  0 passing (394ms)
+  3 failing
+
+  1) meridia-core
+       Places an Order:
+     Error: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 0: custom program error: 0x1004. 
+Logs: 
+[
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr invoke [1]",
+  "Program log: AnchorError occurred. Error Code: DeclaredProgramIdMismatch. Error Number: 4100. Error Message: The declared program id does not match the actual program id.",
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr consumed 2445 of 200000 compute units",
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr failed: custom program error: 0x1004"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+      at Connection.sendEncodedTransaction (node_modules/@solana/web3.js/src/connection.ts:6053:13)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Connection.sendRawTransaction (node_modules/@solana/web3.js/src/connection.ts:6009:20)
+      at async Connection.sendTransaction (node_modules/@solana/web3.js/src/connection.ts:5997:12)
+      at async Object.sendAndConfirmTransaction (node_modules/@solana/web3.js/src/utils/send-and-confirm-transaction.ts:36:21)
+
+  2) meridia-core
+       Ingests a Trigger (Oracle):
+     Error: Simulation failed. 
+Message: Transaction simulation failed: Error processing Instruction 0: custom program error: 0x1004. 
+Logs: 
+[
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr invoke [1]",
+  "Program log: AnchorError occurred. Error Code: DeclaredProgramIdMismatch. Error Number: 4100. Error Message: The declared program id does not match the actual program id.",
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr consumed 2445 of 200000 compute units",
+  "Program BYE3U4QckF1Mhhi5T6Gzeny4s1t22E19u8QgPppQx9tr failed: custom program error: 0x1004"
+]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+      at Connection.sendEncodedTransaction (node_modules/@solana/web3.js/src/connection.ts:6053:13)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async Connection.sendRawTransaction (node_modules/@solana/web3.js/src/connection.ts:6009:20)
+      at async Connection.sendTransaction (node_modules/@solana/web3.js/src/connection.ts:5997:12)
+      at async Object.sendAndConfirmTransaction (node_modules/@solana/web3.js/src/utils/send-and-confirm-transaction.ts:36:21)
+
+  3) meridia-core
+       Settles the Trade:
+     AssertionError: expected 'Simulation failed. \nMessage: Transac…' to include 'TradeNotMatched'
+      at /home/eaa/.gemini/antigravity/scratch/greena_energies/meridia-core/tests/meridia-core.ts:102:14
+      at Generator.throw (<anonymous>)
+      at rejected (tests/meridia-core.ts:39:65)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+
+
+error Command failed with exit code 3.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
